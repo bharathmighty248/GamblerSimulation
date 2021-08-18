@@ -10,8 +10,19 @@ namespace GamblerSimulation
         {
             int stack = 100;
             int bet = 1;
-            Console.WriteLine("Every Day Stack is " + stack);
-            Console.WriteLine("EveryTime Bet is " + bet);
+            Random random = new Random();
+            int game = random.Next(0, 2);
+            if (game == 1)
+            {
+                Console.WriteLine("Gamblem Won the Game ");
+                stack += 1;
+            }
+            else
+            {
+                Console.WriteLine("Gamblem Lost the Game ");
+                stack -= 1;
+            }
+            Console.WriteLine("Final Stack: " + stack);
         }
     }
 }
